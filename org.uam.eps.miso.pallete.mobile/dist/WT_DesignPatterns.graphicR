@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="ASCII"?>
+<graphicR:GraphicRepresentation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:graphicR="http://mondo.org/graphic_representation/1.0.3">
+  <allGraphicRepresentation extension="wt">
+    <listRepresentations xsi:type="graphicR:RepresentationDD">
+      <root>
+        <anEClass href="WT_DesignPatterns.ecore#//WTComponents"/>
+      </root>
+      <layers xsi:type="graphicR:DefaultLayer" name="Default Layer">
+        <elements xsi:type="graphicR:Node">
+          <anEClass href="WT_DesignPatterns.ecore#//Subsystem"/>
+          <diag_palette palette_name="Create Subsystem"/>
+          <containerReference href="WT_DesignPatterns.ecore#//WTComponents/subsystems"/>
+          <node_elements>
+            <LabelanEAttribute>
+              <color xsi:type="graphicR:SiriusSystemColors"/>
+              <anEAttribute href="WT_DesignPatterns.ecore#//Subsystem/name"/>
+            </LabelanEAttribute>
+            <linkPalette palette_name="Create Link subsystems" anDiagramElement="//@allGraphicRepresentation.0/@listRepresentations.0/@layers.0/@elements.0">
+              <anEReference href="WT_DesignPatterns.ecore#//Subsystem/subsystems"/>
+              <color xsi:type="graphicR:SiriusSystemColors"/>
+            </linkPalette>
+            <linkPalette palette_name="Create Link ensembles" anDiagramElement="//@allGraphicRepresentation.0/@listRepresentations.0/@layers.0/@elements.1">
+              <anEReference href="WT_DesignPatterns.ecore#//Subsystem/ensembles"/>
+              <color xsi:type="graphicR:SiriusSystemColors"/>
+            </linkPalette>
+            <linkPalette palette_name="Create Link beh" anDiagramElement="//@allGraphicRepresentation.0/@listRepresentations.0/@layers.0/@elements.2">
+              <anEReference href="WT_DesignPatterns.ecore#//Subsystem/beh"/>
+              <color xsi:type="graphicR:SiriusSystemColors"/>
+            </linkPalette>
+          </node_elements>
+          <node_shape xsi:type="graphicR:Ellipse">
+            <color xsi:type="graphicR:SiriusSystemColors"/>
+            <borderColor xsi:type="graphicR:SiriusSystemColors"/>
+          </node_shape>
+        </elements>
+        <elements xsi:type="graphicR:Node">
+          <anEClass href="WT_DesignPatterns.ecore#//Architecture"/>
+          <diag_palette palette_name="Create Architecture"/>
+          <containerReference href="WT_DesignPatterns.ecore#//Subsystem/ensembles"/>
+          <node_elements>
+            <LabelanEAttribute>
+              <color xsi:type="graphicR:SiriusSystemColors"/>
+              <anEAttribute href="WT_DesignPatterns.ecore#//Architecture/name"/>
+            </LabelanEAttribute>
+            <linkPalette palette_name="Create Link elements" anDiagramElement="//@allGraphicRepresentation.0/@listRepresentations.0/@layers.0/@elements.7">
+              <anEReference href="WT_DesignPatterns.ecore#//Architecture/elements"/>
+              <color xsi:type="graphicR:SiriusSystemColors"/>
+            </linkPalette>
+          </node_elements>
+          <node_shape xsi:type="graphicR:Ellipse">
+            <color xsi:type="graphicR:SiriusSystemColors"/>
+            <borderColor xsi:type="graphicR:SiriusSystemColors"/>
+          </node_shape>
+        </elements>
+        <elements xsi:type="graphicR:Node">
+          <anEClass href="WT_DesignPatterns.ecore#//ControlSubsystem"/>
+          <diag_palette palette_name="Create ControlSubsystem"/>
+          <containerReference href="WT_DesignPatterns.ecore#//Subsystem/beh"/>
+          <node_elements>
+            <LabelanEAttribute>
+              <color xsi:type="graphicR:SiriusSystemColors"/>
+              <anEAttribute href="WT_DesignPatterns.ecore#//ControlSubsystem/name"/>
+            </LabelanEAttribute>
+            <linkPalette palette_name="Create Link states" anDiagramElement="//@allGraphicRepresentation.0/@listRepresentations.0/@layers.0/@elements.3">
+              <anEReference href="WT_DesignPatterns.ecore#//ControlSubsystem/states"/>
+              <color xsi:type="graphicR:SiriusSystemColors"/>
+            </linkPalette>
+          </node_elements>
+          <node_shape xsi:type="graphicR:Ellipse">
+            <color xsi:type="graphicR:SiriusSystemColors"/>
+            <borderColor xsi:type="graphicR:SiriusSystemColors"/>
+          </node_shape>
+        </elements>
+        <elements xsi:type="graphicR:Node">
+          <anEClass href="WT_DesignPatterns.ecore#//StateMachine"/>
+          <diag_palette palette_name="Create StateMachine"/>
+          <containerReference href="WT_DesignPatterns.ecore#//ControlSubsystem/states"/>
+          <node_elements>
+            <LabelanEAttribute>
+              <color xsi:type="graphicR:SiriusSystemColors"/>
+              <anEAttribute href="WT_DesignPatterns.ecore#//StateMachine/name"/>
+            </LabelanEAttribute>
+            <linkPalette palette_name="Create Link states" anDiagramElement="//@allGraphicRepresentation.0/@listRepresentations.0/@layers.0/@elements.5 //@allGraphicRepresentation.0/@listRepresentations.0/@layers.0/@elements.6">
+              <anEReference href="WT_DesignPatterns.ecore#//StateMachine/states"/>
+              <color xsi:type="graphicR:SiriusSystemColors"/>
+            </linkPalette>
+            <linkPalette palette_name="Create Link transitions">
+              <anEReference href="WT_DesignPatterns.ecore#//StateMachine/transitions"/>
+              <color xsi:type="graphicR:SiriusSystemColors"/>
+            </linkPalette>
+          </node_elements>
+          <node_shape xsi:type="graphicR:Ellipse">
+            <color xsi:type="graphicR:SiriusSystemColors"/>
+            <borderColor xsi:type="graphicR:SiriusSystemColors"/>
+          </node_shape>
+        </elements>
+        <elements xsi:type="graphicR:Edge">
+          <anEClass href="WT_DesignPatterns.ecore#//Edge"/>
+          <diag_palette palette_name="Create Edge"/>
+          <containerReference href="WT_DesignPatterns.ecore#//StateMachine/transitions"/>
+          <directions>
+            <sourceLink anDiagramElement="//@allGraphicRepresentation.0/@listRepresentations.0/@layers.0/@elements.5 //@allGraphicRepresentation.0/@listRepresentations.0/@layers.0/@elements.6">
+              <anEReference href="WT_DesignPatterns.ecore#//Edge/source"/>
+            </sourceLink>
+            <targetLink anDiagramElement="//@allGraphicRepresentation.0/@listRepresentations.0/@layers.0/@elements.5 //@allGraphicRepresentation.0/@listRepresentations.0/@layers.0/@elements.6">
+              <anEReference href="WT_DesignPatterns.ecore#//Edge/target"/>
+            </targetLink>
+          </directions>
+          <edge_style>
+            <color xsi:type="graphicR:SiriusSystemColors"/>
+          </edge_style>
+        </elements>
+        <elements xsi:type="graphicR:Node">
+          <anEClass href="WT_DesignPatterns.ecore#//InitialState"/>
+          <diag_palette palette_name="Create InitialState"/>
+          <containerReference href="WT_DesignPatterns.ecore#//StateMachine/states"/>
+          <node_elements>
+            <LabelanEAttribute>
+              <color xsi:type="graphicR:SiriusSystemColors"/>
+              <anEAttribute href="WT_DesignPatterns.ecore#//DocumentElt/name"/>
+            </LabelanEAttribute>
+          </node_elements>
+          <node_shape xsi:type="graphicR:Ellipse">
+            <color xsi:type="graphicR:SiriusSystemColors"/>
+            <borderColor xsi:type="graphicR:SiriusSystemColors"/>
+          </node_shape>
+        </elements>
+        <elements xsi:type="graphicR:Node">
+          <anEClass href="WT_DesignPatterns.ecore#//SimpleState"/>
+          <diag_palette palette_name="Create SimpleState"/>
+          <containerReference href="WT_DesignPatterns.ecore#//StateMachine/states"/>
+          <node_elements>
+            <LabelanEAttribute>
+              <color xsi:type="graphicR:SiriusSystemColors"/>
+              <anEAttribute href="WT_DesignPatterns.ecore#//DocumentElt/name"/>
+            </LabelanEAttribute>
+          </node_elements>
+          <node_shape xsi:type="graphicR:Ellipse">
+            <color xsi:type="graphicR:SiriusSystemColors"/>
+            <borderColor xsi:type="graphicR:SiriusSystemColors"/>
+          </node_shape>
+        </elements>
+        <elements xsi:type="graphicR:Node">
+          <anEClass href="WT_DesignPatterns.ecore#//Component"/>
+          <diag_palette palette_name="Create Component"/>
+          <containerReference href="WT_DesignPatterns.ecore#//Architecture/elements"/>
+          <node_elements>
+            <LabelanEAttribute>
+              <color xsi:type="graphicR:SiriusSystemColors"/>
+              <anEAttribute href="WT_DesignPatterns.ecore#//Component/label"/>
+            </LabelanEAttribute>
+            <linkPalette palette_name="Create Link ports" anDiagramElement="//@allGraphicRepresentation.0/@listRepresentations.0/@layers.0/@elements.8 //@allGraphicRepresentation.0/@listRepresentations.0/@layers.0/@elements.9">
+              <anEReference href="WT_DesignPatterns.ecore#//Component/ports"/>
+              <color xsi:type="graphicR:SiriusSystemColors"/>
+            </linkPalette>
+            <linkPalette palette_name="Create Link states" anDiagramElement="//@allGraphicRepresentation.0/@listRepresentations.0/@layers.0/@elements.3">
+              <anEReference href="WT_DesignPatterns.ecore#//Component/states"/>
+              <color xsi:type="graphicR:SiriusSystemColors"/>
+            </linkPalette>
+          </node_elements>
+          <node_shape xsi:type="graphicR:Ellipse">
+            <color xsi:type="graphicR:SiriusSystemColors"/>
+            <borderColor xsi:type="graphicR:SiriusSystemColors"/>
+          </node_shape>
+        </elements>
+        <elements xsi:type="graphicR:Node">
+          <anEClass href="WT_DesignPatterns.ecore#//InPort"/>
+          <diag_palette palette_name="Create InPort"/>
+          <containerReference href="WT_DesignPatterns.ecore#//Component/ports"/>
+          <node_elements>
+            <LabelanEAttribute>
+              <color xsi:type="graphicR:SiriusSystemColors"/>
+              <anEAttribute href="WT_DesignPatterns.ecore#//Port/label"/>
+            </LabelanEAttribute>
+          </node_elements>
+          <node_shape xsi:type="graphicR:Ellipse">
+            <color xsi:type="graphicR:SiriusSystemColors"/>
+            <borderColor xsi:type="graphicR:SiriusSystemColors"/>
+          </node_shape>
+        </elements>
+        <elements xsi:type="graphicR:Node">
+          <anEClass href="WT_DesignPatterns.ecore#//OutPort"/>
+          <diag_palette palette_name="Create OutPort"/>
+          <containerReference href="WT_DesignPatterns.ecore#//Component/ports"/>
+          <node_elements>
+            <LabelanEAttribute>
+              <color xsi:type="graphicR:SiriusSystemColors"/>
+              <anEAttribute href="WT_DesignPatterns.ecore#//Port/label"/>
+            </LabelanEAttribute>
+          </node_elements>
+          <node_shape xsi:type="graphicR:Ellipse">
+            <color xsi:type="graphicR:SiriusSystemColors"/>
+            <borderColor xsi:type="graphicR:SiriusSystemColors"/>
+          </node_shape>
+        </elements>
+      </layers>
+    </listRepresentations>
+  </allGraphicRepresentation>
+</graphicR:GraphicRepresentation>

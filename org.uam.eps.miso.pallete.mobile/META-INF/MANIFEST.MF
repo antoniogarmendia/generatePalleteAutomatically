@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Main-Class: org.uam.eps.miso.pallete.mobile.main.PaletteMain
+Bundle-ManifestVersion: 2
+Bundle-Name: Mobile
+Bundle-SymbolicName: org.uam.eps.miso.pallete.mobile
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.uam.eps.miso.pallete.mobile.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.apache.commons.cli;bundle-version="1.2.0",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.11.1",
+ org.mondo.emf.splitter.library;bundle-version="0.1.0",
+ org.mondo.mm.heuristic.visualization
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Import-Package: dslHeuristicVisualization,
+ graphic_representation
